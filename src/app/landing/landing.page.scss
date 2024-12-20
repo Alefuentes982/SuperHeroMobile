@@ -1,0 +1,50 @@
+ion-content {
+  --background: transparent;
+}
+
+.background-image {
+  background-image: url('/assets/icon/Super_Heroes.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Barra de navegación semitransparente */
+.header-transparent {
+  background: rgba(0, 0, 0, 0.5);
+  /* Fondo semitransparente oscuro */
+  color: #ffffff;
+  /* Texto blanco */
+}
+
+
+/* Barra fija en el pie */
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  --opacity: 0.1;
+  /* Fondo blanco con opacidad */
+}
+
+.title-container {
+  display: flex;
+  /* Alinea los elementos horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
+  gap: 8px;
+  /* Espacio entre el logo y el texto */
+}
+
+.logo {
+  width: 30px;
+  /* Ajusta el ancho del logo */
+  height: 30px;
+  /* Ajusta el alto del logo */
+}

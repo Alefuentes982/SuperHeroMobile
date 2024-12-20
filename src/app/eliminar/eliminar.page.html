@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-start">Eliminar Usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/administrador">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-card *ngFor="let usuario of usuarios">
+      <ion-card-header class="card-header-background">
+        <ion-card-subtitle class="card-sub">Usuario: </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-header class="card-header-background">
+        <ion-card-subtitle class="card-sub">{{ usuario.email }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p><strong>Nombre: </strong> {{usuario.nombre}} {{usuario.apellido}}</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p><strong>Rol: </strong> {{usuario.rol}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-button (click)="eliminarUsuario(usuario.id)" expand="block">
+          Eliminar
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

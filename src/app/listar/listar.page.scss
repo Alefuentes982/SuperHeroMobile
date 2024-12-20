@@ -1,0 +1,112 @@
+/* Fondo del contenido principal */
+ion-content {
+  --background: #000000;
+  /* Fondo negro */
+  color: #ffffff;
+  /* Texto blanco */
+}
+
+/* Estilo para las tarjetas */
+ion-card {
+  background-image: url('/assets/icon/simbolos.jpg') !important;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: #ffd700;
+  /* Amarillo dorado */
+  color: #000000;
+  /* Texto negro */
+  border-radius: 12px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Sombra */
+  margin: 10px;
+  /* Espacio entre tarjetas */
+  height: 180px;
+  /* Altura fija */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Distribuye espacio verticalmente */
+  overflow: hidden;
+  /* Evita el desbordamiento */
+}
+
+/* Encabezado y contenido alineado */
+ion-card-header {
+  //background-color: rgba(255, 215, 0, 0.9);
+  padding: 8px;
+  /* Espaciado interno */
+  text-align: center;
+  /* Centrar texto */
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+ion-card-subtitle {
+  font-size: 1rem;
+}
+
+.card-header-background {
+  background-color: rgb(0, 0, 0, 0.5);
+  /* Fondo blanco */
+  color: #ffffff;
+  /* Texto negro */
+  padding: 8px;
+  /* Espaciado interno */
+  border-radius: 8px;
+  /* Bordes ligeramente redondeados */
+  text-align: center;
+  /* Centrar el texto */
+}
+
+.card-sub {
+  color: #ffffff;
+}
+
+ion-card-content {
+  background-color: rgba(255, 215, 0, 0.9);
+  /* Amarillo dorado con transparencia */
+
+  /* Fondo blanco sólido */
+  border-radius: 0 0 12px 12px;
+  /* Redondeado solo en la parte inferior */
+  padding: 10px;
+  /* Espaciado interno */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Alinea el contenido */
+  flex-grow: 1;
+}
+
+/* Ajuste de las imágenes */
+ion-thumbnail {
+  width: 70px;
+  /* Ancho fijo */
+  height: 70px;
+  /* Altura fija */
+  margin: 0 10px 0 0;
+  /* Espaciado derecho */
+}
+
+/* Alineación del texto y la imagen */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Alinea contenido a la izquierda */
+  gap: 10px;
+  /* Espacio entre imagen y texto */
+  width: 100%;
+  padding: 8px;
+  /* Espaciado */
+}
+
+.content-wrapper p {
+  margin: 0;
+  /* Elimina márgenes del texto */
+  font-size: 1.1rem;
+  font-weight: normal;
+}

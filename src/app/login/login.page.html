@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark" class="header-transparent">
+    <ion-title>
+      <div class="title-container">
+        <img src="assets/icon/logo.jpg" alt="Logo" class="logo" />
+        <span>Superhéroes</span>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background-image">
+  <ion-content class="ion-padding">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <!-- Campo Email -->
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email" formControlName="email" autocomplete="off" name="email-input">
+        </ion-input>
+      </ion-item>
+      <ion-text color="success" *ngIf="formulario.get('email')?.touched && formulario.get('email')?.invalid">
+        <p class="error-message" *ngIf="formulario.get('email')?.errors?.['required']">El correo es obligatorio.</p>
+        <p class="error-message" *ngIf="formulario.get('email')?.errors?.['email']">Formato de correo inválido.</p>
+      </ion-text>
+
+      <!-- Campo Contraseña -->
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" formControlName="password" autocomplete="off">
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="formulario.get('password')?.touched && formulario.get('password')?.invalid">
+        <p class="error-message" *ngIf="formulario.get('password')?.errors?.['required']">La contraseña es obligatoria.
+        </p>
+        <p class="error-message" *ngIf="formulario.get('password')?.errors?.['minlength']">
+          La contraseña debe tener al menos 6 caracteres.
+        </p>
+      </ion-text>
+
+      <!-- Botón de envío -->
+      <ion-button class="btn-iniciar" expand="block" type="submit" [disabled]="formulario.invalid">
+        Iniciar Sesión
+      </ion-button>
+
+    </form>
+
+  </ion-content>
+</ion-content>

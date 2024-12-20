@@ -1,0 +1,145 @@
+/* Fondo del contenido principal */
+ion-content {
+  --background: #000000;
+  /* Fondo negro */
+  color: #ffffff;
+  /* Texto blanco */
+}
+
+/* Estilo para las tarjetas */
+ion-card {
+  background-color: #ffd700;
+  /* Amarillo dorado */
+  background-image: url('/assets/icon/simbolos.jpg') !important;
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  color: #000000;
+  /* Texto negro */
+  border-radius: 12px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Sombra */
+  margin: 10px;
+  /* Espaciado entre tarjetas */
+  padding: 15px;
+  /* Espaciado interno */
+  overflow: hidden;
+  /* Evita el desbordamiento */
+}
+
+/* Encabezado y contenido alineado */
+ion-card-header {
+  background-color: #ffffff !important;
+  /* Fondo blanco sólido */
+  opacity: 1 !important;
+  /* Elimina transparencia */
+  padding: 8px;
+  /* Espaciado interno */
+  text-align: center;
+  /* Centrar texto */
+  font-size: 1.2rem;
+  /* Tamaño de fuente */
+  font-weight: bold;
+  /* Negrita */
+  color: #333;
+  /* Texto oscuro */
+  border-bottom: 1px solid #e0e0e0;
+  /* Separador inferior */
+}
+
+/* Subtítulos en el encabezado */
+.card-header-background {
+  background-color: #ffffff !important;
+  /* Fondo blanco */
+  opacity: 1 !important;
+  /* Elimina transparencia */
+  color: #333 !important;
+  /* Texto oscuro */
+  padding: 8px;
+  /* Espaciado interno */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  text-align: center;
+  /* Centrar texto */
+}
+
+.card-sub {
+  color: #333 !important;
+  /* Texto oscuro */
+}
+
+/* Contenido de las tarjetas */
+ion-card-content {
+  background-color: rgba(255, 215, 0, 0.9);
+  /* Amarillo dorado */
+  padding: 10px;
+  /* Espaciado interno */
+  border-radius: 0 0 12px 12px;
+  /* Bordes redondeados en la parte inferior */
+  display: flex;
+  flex-direction: column;
+  /* Alinea contenido verticalmente */
+  gap: 8px;
+  /* Espaciado entre elementos */
+}
+
+ion-card-content p {
+  margin: 5px 0;
+  /* Espacio entre párrafos */
+  line-height: 1.5;
+  /* Ajusta el espaciado entre líneas */
+  color: #333;
+  /* Texto oscuro */
+  font-size: 1.1rem;
+  /* Tamaño de fuente */
+}
+
+/* Alineación del texto y las imágenes */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* Ordena elementos verticalmente */
+  gap: 10px;
+  /* Espacio entre elementos */
+  width: 100%;
+  /* Ocupa todo el ancho */
+}
+
+.content-wrapper p {
+  margin: 0;
+  /* Elimina márgenes del texto */
+  font-size: 1rem;
+  /* Tamaño de fuente */
+  font-weight: normal;
+}
+
+/* Ajuste de botones */
+ion-button {
+  margin-top: 10px;
+  /* Añade margen superior */
+  margin-bottom: 10px;
+  /* Añade margen inferior */
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  /* Texto en mayúsculas */
+  color: #ffffff;
+  /* Texto blanco */
+  background-color: #007bff;
+  /* Color primario */
+}
+
+/* Evita el desbordamiento del contenido */
+ion-card {
+  height: auto;
+  /* Altura dinámica */
+}
+
+ion-thumbnail {
+  width: 70px;
+  /* Ancho fijo */
+  height: 70px;
+  /* Altura fija */
+  margin: 0 10px 0 0;
+  /* Espaciado derecho */
+}

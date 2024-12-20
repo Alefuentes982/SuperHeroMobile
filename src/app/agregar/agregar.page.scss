@@ -1,0 +1,14 @@
+ion-content {
+  --background: transparent;
+}
+
+
+.background-image {
+  background-image: url('/assets/icon/simbolos.jpg') !important;
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+
+  height: 100vh;
+  width: 100%;
+}

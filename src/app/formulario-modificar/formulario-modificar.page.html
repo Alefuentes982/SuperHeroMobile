@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-start">Actualizar usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/modificar">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form [formGroup]="modificarForm" (ngSubmit)="guardarCambios()">
+    <ion-item>
+      <ion-label position="floating">Usuario (no editable / clave primaria)</ion-label>
+      <ion-input type="email" formControlName="email" [readonly]="isEmailDisabled"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input formControlName="apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">contraseña</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Rol</ion-label>
+      <ion-label>Usuario</ion-label>
+      <ion-toggle [checked]="modificarForm.get('rol')?.value === 'admin'" (ionChange)="toggleRol($event)">
+      </ion-toggle>
+      <ion-label>Administrador</ion-label>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="modificarForm.invalid">
+      Guardar Cambios
+    </ion-button>
+  </form>
+  <ion-img class="background-image"></ion-img>
+
+</ion-content>

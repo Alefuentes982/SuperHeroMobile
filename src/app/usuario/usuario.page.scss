@@ -1,0 +1,28 @@
+.superhero-container {
+  padding: 10px;
+
+  .header {
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .resultados-container ion-card {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  ion-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+  }
+}

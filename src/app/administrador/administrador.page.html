@@ -1,0 +1,49 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Gestión de usuarios</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-buttons>
+      <ion-button routerLink="/agregar">Agregar usuario</ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button routerLink="/modificar">Modificar datos de usuario</ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button routerLink="/listar">Listar usuarios</ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button routerLink="/eliminar">Eliminar usuario</ion-button>
+    </ion-buttons>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons>
+        <ion-button expand="full" routerLink="/landing">Cerrar sesión</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Super-Administrador</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="onLogout()">Cerrar sesión</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-toolbar>
+      <h6>Presione "menu" en la barra de navegación para comenzar a gestionar usuarios.</h6>
+    </ion-toolbar>
+  </ion-content>
+  <ion-img class="background-image"></ion-img>
+
+</div>

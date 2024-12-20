@@ -1,0 +1,7 @@
+{
+  "name": "superheroes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

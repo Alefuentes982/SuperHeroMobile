@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>Superhéroes</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/landing">Cerrar sesión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="superhero-container">
+  <!-- Encabezado -->
+  <div class="header">
+    <h1>Explora tus Superhéroes Favoritos</h1>
+  </div>
+
+  <!-- Formulario de búsqueda -->
+  <div class="search-container">
+    <ion-item>
+      <ion-input placeholder="Ingresa el número del superhéroe (1-731)..." [(ngModel)]="busqueda"></ion-input>
+      <ion-button (click)="buscarSuperHeroe()" color="primary">Buscar</ion-button>
+    </ion-item>
+  </div>
+
+  <!-- Mensaje de error -->
+  <div *ngIf="error" class="error-message">
+    <p>{{ error }}</p>
+  </div>
+
+  <!-- Resultados del superhéroe -->
+  <div *ngIf="resultados" class="resultados-container">
+    <ion-card>
+      <img [src]="resultados.image.url" alt="Imagen del superhéroe" />
+      <ion-card-header>
+        <ion-card-title>{{ resultados.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Conexiones:</strong> {{ resultados.connections['group-affiliation'] }}</p>
+        <p><strong>Ocupación:</strong> {{ resultados.work.occupation }}</p>
+        <p><strong>Altura:</strong> {{ resultados.appearance.height[0] }} / {{ resultados.appearance.height[1] }}</p>
+        <p><strong>Peso:</strong> {{ resultados.appearance.weight[0] }} / {{ resultados.appearance.weight[1] }}</p>
+        <p><strong>Primera Aparición:</strong> {{ resultados.biography['first-appearance'] }}</p>
+        <p><strong>Editor:</strong> {{ resultados.biography.publisher }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

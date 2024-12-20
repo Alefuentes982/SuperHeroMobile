@@ -1,0 +1,105 @@
+ion-content {
+  --background: transparent;
+}
+
+.background-image {
+  background-image: url('/assets/icon/Marvel_Comics.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Barra de navegación semitransparente */
+.header-transparent {
+  // background: rgba(0, 0, 0);
+  /* Fondo semitransparente oscuro */
+  color: #ffffff;
+  /* Texto blanco */
+}
+
+
+/* Barra fija en el pie */
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  //background: rgba(255, 255, 255, 0.9);
+  --opacity: 0.1;
+  /* Fondo blanco con opacidad */
+}
+
+.title-container {
+  display: flex;
+  /* Alinea los elementos horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
+  gap: 8px;
+  /* Espacio entre el logo y el texto */
+}
+
+.logo {
+  width: 30px;
+  /* Ajusta el ancho del logo */
+  height: 30px;
+  /* Ajusta el alto del logo */
+}
+
+
+.btn-iniciar {
+  margin-top: 250px;
+
+  background-color: #004080 !important;
+  /* Azul sólido */
+  color: #ffffff !important;
+  /* Texto blanco */
+  font-weight: bold;
+  /* Texto más grueso */
+  border-radius: 8px;
+  /* Bordes ligeramente redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  /* Sombra sutil */
+  opacity: 1 !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+
+  &:hover {
+    background-color: #003366 !important;
+    /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+    /* Efecto de levantar ligeramente */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  &:disabled {
+    background-color: #cccccc !important;
+    /* Gris para estado deshabilitado */
+    color: #666666;
+    /* Texto gris */
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+
+.error-message {
+  background-color: #000000;
+  /* Fondo negro */
+  color: #42d96b;
+  /* Texto blanco */
+  padding: 8px 12px;
+  /* Espaciado interno */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  margin-top: 4px;
+  /* Margen superior */
+  text-align: center;
+  /* Centra el texto */
+  font-size: 14px;
+  /* Tamaño de letra */
+  font-weight: bold;
+}

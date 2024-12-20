@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Agregar nuevo usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/administrador">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-padding">
+      <ion-col size="12" size-md="6">
+        <ion-card>
+
+          <ion-card-header>
+            <ion-card-title class="ion-text-center">Ingresa los datos del nuevo usuario</ion-card-title>
+          </ion-card-header>
+
+          <form (submit)="agregarUsuario()">
+            <!--  <ion-item>
+              <ion-label>Nombre de Usuario</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="nombreUsuario" name="nombreUsuario" fill="outline" type="text"></ion-input>
+            </ion-item> -->
+
+            <ion-item>
+              <ion-label>Nombre</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="nombre" name="nombre" fill="outline" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Apellido</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="apellido" name="apellido" fill="outline" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Correo Electronico</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="email" name="email" fill="outline" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Contraseña</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-input [(ngModel)]="contrasena" name="contrasena" fill="outline" type="password"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Rol</ion-label>
+              <ion-label>usuario</ion-label>
+              <ion-toggle [(ngModel)]="esAdministrador" name="rolToggle" (ionChange)="toggleRol($event)"></ion-toggle>
+              <ion-label>administrador</ion-label>
+            </ion-item>
+            <ion-button expand="block" type="submit">
+              Crear cuenta
+            </ion-button>
+          </form>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
